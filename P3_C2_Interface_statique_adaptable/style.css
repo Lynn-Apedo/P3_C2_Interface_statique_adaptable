@@ -5,6 +5,8 @@
 }
 
 body {
+    width: 100vw;
+    overflow-x: hidden;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -156,6 +158,9 @@ header article {
 #legacy h3 {
     padding: 10% 0 5% 0;
 }
+#legacy {
+    color: gray;
+}
 .btn_buy {
     background-color: #84c99d;
     border: none;
@@ -183,7 +188,7 @@ header article {
 .tagmostpopular {
     display: inline;
     border-radius: 5px;
-    padding: 2.3% 3% ;
+    padding: 13px 19px;
     background-color: #bd8cbe;
     color: white;
     font-weight: bold;
@@ -266,6 +271,10 @@ footer {
         color: red;
     }
 
+    #details {
+        padding: 5% 10% 17% 10%;
+    }
+
     #features {
         display: flex;
         flex-wrap: wrap;
@@ -274,21 +283,119 @@ footer {
         width: 50%;
     }
     .boxpolaire {
-        background:url('./img/box-bg.jpg') no-repeat center/cover;
+        background:url('./img/box-bg.jpg') no-repeat right/cover;
+    }
+    .boxsun {
+        background: url('./img/box-bg-lg.jpg') no-repeat -100px 0px/cover;
     }
 
-    .boxdetails {
+    .boxdetails, .boxreasons, .boxlegacy{
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
     }
     .web, .performance, .cultural, .sustainability {
         width: 50%;
         padding: 2%;
     }
 
+    #power {
+        background: url('./img/full-image.jpg') no-repeat left/cover;
+        height: 100vh;
+    }
     .morePower {
         width: 45%;
     }
 
+    #reasons {
+        padding: 15% 10% 20% 10%;
+    }
+    .reasons_webbased, .reasons_teamlogin, .reasons_greatsupport {
+        width: 32%;
+        padding-left: 2%;
+    }
 
+    .gotitsolo, .teamPlan {
+        width: 45%;
+    }
+
+}
+
+@media screen and (min-width: 1040px) and (max-width: 2000px) {
+    body {
+        flex-direction: column;
+    }
+
+    header { 
+        background: url('./img/mastehead.jpg')no-repeat center/cover;
+    }
+    header h1 {
+        padding-bottom: 1%;
+    }
+    nav {
+        padding: 1% 1%;
+    }
+    
+    #start {
+        padding: 10% 20% 6% 20%;   
+    }
+    #features, #reasons, #legacy {
+        padding: 5% 20%;
+    }
+    #details {
+        padding: 5% 20% 10% 20%;
+    }
+    #power {
+        height: 100vh;
+        padding: 10% 20%;
+    }
+    .startSpeech {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap; 
+    }
+    .startSpeech p {
+        width: 50%;
+        padding: 0 2% 0 0 ;
+    }
+    
+    .boxdetails, .boxlegacy{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .web, .performance, .cultural, .sustainability  {
+        width: 25%;
+        padding: 2%;
+    }
+
+    .morePower {
+        width: 50%;
+        padding: 23% 0;
+        line-height: 1.2;
+    }
+    .morePower h1 {
+        padding-bottom: 6%;
+    }
+
+    .boxreasons, .boxlegacy {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    .reasons_webbased, .reasons_teamlogin, .reasons_greatsupport, .teamPlan, .gotitsolo {
+        width: 70%;
+        padding-right: 2%;
+    }
+
+    .teamPlan:hover  {
+        box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5), 5px -5px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        padding: 5% 2%;
+    }
+   
+    
 }
