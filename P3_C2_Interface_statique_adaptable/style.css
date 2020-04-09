@@ -94,6 +94,9 @@ header article {
 #start p {
     color: gray;
 }
+#start img {
+    display: none;
+}
 
 #features {
     width: 100vw;
@@ -153,7 +156,7 @@ header article {
 
 #legacy {
     width: 100vw;
-    /*background-color: rgb(78, 15, 25);*/
+    background-color:#f4f8fb;
     padding: 10%;
 }
 #legacy h3 {
@@ -223,7 +226,7 @@ footer {
 }
 .getintouch p{
     padding-bottom: 5%;
-}
+}cover
 .stayintouch {
     padding-bottom: 3%;
 }
@@ -258,6 +261,13 @@ footer {
     body {
         flex-direction: column;
     }
+    h1 {
+        font-size: 60px;
+    }
+    header article {
+        padding: 0 10% 30% 10%;
+        width: 55%;
+    }
     .startSpeech, .boxdetails {
         display: flex;
         flex-direction: row;
@@ -271,7 +281,10 @@ footer {
         padding-top: 20%;
         color: red;
     }
-
+    #start img {
+        display: none;
+    }
+    
     #details {
         padding: 5% 10% 17% 10%;
     }
@@ -303,10 +316,11 @@ footer {
 
     #power {
         background: url('./img/full-image.jpg') no-repeat left/cover;
-        height: 100vh;
+    padding: 30% 10% 30% 10%;
+
     }
     .morePower {
-        width: 45%;
+        width: 55%;
     }
 
     #reasons {
@@ -327,12 +341,26 @@ footer {
     body {
         flex-direction: column;
     }
-
+    h1 {
+        font-size: 65px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    .brandName {
+        padding: 0 1%;
+    }
     header { 
         background: url('./img/mastehead.jpg')no-repeat center/cover;
+      
+        
     }
     header h1 {
         padding-bottom: 1%;
+    }
+    header article {
+        width: 60%;
+        padding-left: 20%;
     }
     nav {
         padding: 1% 1%;
@@ -341,15 +369,11 @@ footer {
     #start {
         padding: 10% 20% 6% 20%;   
     }
-    #features, #reasons, #legacy {
-        padding: 5% 20%;
-    }
-    #details {
-        padding: 5% 20% 10% 20%;
-    }
-    #power {
-        height: 100vh;
-        padding: 10% 20%;
+    #start img {
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: 50%;
     }
     .startSpeech {
         display: flex;
@@ -361,16 +385,60 @@ footer {
         width: 50%;
         padding: 0 2% 0 0 ;
     }
+    .startSpeech p:nth-last-child(1) {
+        padding-top: 10%;
+    }
+    
+    #features, #reasons, #legacy {
+        padding: 5% 20%;
+    }
+
+    /* test */
+    .grid-container {
+        display: grid;
+        grid-template-columns: (1fr 1fr 1fr);
+        grid-template-rows: (1fr 1fr 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+        .boxrose { 
+            height: 31vh;
+            grid-area: 1 / 1 / 2 / 2; 
+            padding: 15%;
+        }
+        .boxlavande { 
+            padding: 15%;
+            grid-area: 1 / 2 / 2 / 3; 
+        }
+        .boxpolaire{ 
+            background: url('./img/box-bg.jpg') no-repeat right /cover; 
+            padding: 15%;
+            grid-area: 1 / 3 / 2 / 4;
+        }
+        .boxsun { 
+            height: 30vh;
+            padding: 8%;
+        grid-area: 2 / 1 / 3 / 3; }
+        .boxturquoise {
+            padding: 15%;
+        grid-area: 2 / 3 / 3 / 4; }
+   
+    #details {
+        padding: 5% 20% 10% 20%;
+    }
+    #power {
+        height: 100vh;
+        padding: 10% 20%;
+    }
     
     .boxdetails, .boxlegacy{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center;
     }
     .web, .performance, .cultural, .sustainability  {
         width: 25%;
-        padding: 2%;
+        padding-right: 2%;
     }
 
     .morePower {
@@ -387,17 +455,37 @@ footer {
         justify-content: space-between;
         flex-wrap: nowrap;
     }
-    .reasons_webbased, .reasons_teamlogin, .reasons_greatsupport, .teamPlan, .gotitsolo {
-        width: 70%;
+    .reasons_webbased, .reasons_teamlogin, .reasons_greatsupport{
+        width: 30%;
         padding-right: 2%;
     }
-
-    .teamPlan:hover  {
-        box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5), 5px -5px rgba(0, 0, 0, 0.5);
-        border-radius: 5px;
-        padding: 5% 2%;
-        color:#84c99d
+    #reasons {
+        padding: 12% 20%;
+ 
     }
+    #legacy {
+        height: 90vh;
+    }
+    .teamPlan:hover, .gotitsolo:hover  {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        padding: 5%;
+        background-color: white;
+        margin: 0 5%;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+      
+    }
+    .getintouch, .boxsearchbar, .links{
+        width: 50%;
+        padding: 0 5% 5% 0;
+    }
+
+   
    
     
 }
