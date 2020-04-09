@@ -10,10 +10,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* gestion des 'communs' */
 main {
     display: flex;
-    /*flex-direction: column;*/
-    flex-wrap: wrap;
+    flex-direction: column; 
+    /*flex-wrap: wrap;*/
 }
 p {
     line-height: 1.4;
@@ -57,6 +58,8 @@ ul {
 button {
     cursor: pointer;
 }
+
+/* partie HEADER */
 header {
     width: 100vw;
     height: 100vh;
@@ -86,6 +89,7 @@ header article {
     width: 70%;
 }
 
+/* partie START */
 #start {
     width: 100vw;
     /*background-color: indianred;*/
@@ -98,14 +102,12 @@ header article {
     display: none;
 }
 
+/* partie FEATURES */
 #features {
     width: 100vw;
     /*background-color: lemonchiffon;*/
     padding: 10%;
     color: white;
-}
-#features h3 {
-    
 }
 .box {
     padding: 11% 8%;
@@ -126,7 +128,7 @@ header article {
     background-color: #84c99d;
 }
 
-
+/* partie DETAILS */
 #details {
     width: 100vw;
     /*background-color: darkcyan;*/
@@ -139,6 +141,7 @@ header article {
     color: rgb(107, 107, 107);
 }
 
+/* partie POWER */
 #power {
     width: 100vw;
     /*background-color: ivory;*/
@@ -147,6 +150,7 @@ header article {
     color: white;
 }
 
+/* partie REASONS */
 #reasons {
     width: 100vw;
     background-color: #84c99d;
@@ -178,7 +182,7 @@ header article {
 .logoOS {
     margin-bottom: 10%;
 }
-.gotitsolo {
+.gotitsolo, .teamPlan {
     padding: 10% 0;
 }
 .taglegacy {
@@ -226,7 +230,7 @@ footer {
 }
 .getintouch p{
     padding-bottom: 5%;
-}cover
+}
 .stayintouch {
     padding-bottom: 3%;
 }
@@ -275,10 +279,10 @@ footer {
     }
     .startSpeech p {
         width: 50%;
-        padding: 0 2% ;
+        padding: 0 2% 0 0 ;
     }
     .startSpeech p:nth-last-child(1) {
-        padding-top: 20%;
+        padding-top: 10%;
         color: red;
     }
     #start img {
@@ -302,7 +306,9 @@ footer {
     .boxsun {
         background: url('./img/box-bg-lg.jpg') no-repeat -100px 0px/cover;
     }
-
+    .boxturquoise {
+        width: 100%;
+    }
     .boxdetails, .boxreasons, .boxlegacy{
         display: flex;
         flex-wrap: wrap;
@@ -337,7 +343,7 @@ footer {
 
 }
 
-@media screen and (min-width: 1040px)  {
+@media screen and (min-width: 1024px)  {
     body {
         flex-direction: column;
     }
@@ -352,8 +358,6 @@ footer {
     }
     header { 
         background: url('./img/mastehead.jpg')no-repeat center/cover;
-      
-        
     }
     header h1 {
         padding-bottom: 1%;
@@ -461,10 +465,13 @@ footer {
     }
     #reasons {
         padding: 12% 20%;
- 
     }
+    
     #legacy {
         height: 90vh;
+    }
+    .gotitsolo, .teamPlan {
+        width: 48%;
     }
     .teamPlan:hover, .gotitsolo:hover  {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -478,7 +485,9 @@ footer {
         flex-wrap: wrap;
         display: flex;
         flex-direction: row;
-      
+    }
+    .stayintouch {
+        padding-bottom: 3%;
     }
     .getintouch, .boxsearchbar, .links{
         width: 50%;
